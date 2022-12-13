@@ -65,6 +65,8 @@ export class FormLayoutDemoComponent {
        }
     toggle3(a:any){
         this.home = !this.home;
-        
+        this.districtadmin=false;
+        this.createdistrictadmin=false;
+        this.selfregistration=false;
     }
 }
