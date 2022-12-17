@@ -1,6 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LayoutService } from 'src/app/layout/service/app.layout.service';
 import { __values } from 'tslib';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { EncrDecrServiceService } from 'src/app/service/encr-decr-service.service';
+
 
 @Component({
     selector: 'app-login',
@@ -14,11 +17,15 @@ import { __values } from 'tslib';
         }
     `]
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
+    userForm!: FormGroup;
+
+    
+    
 
     valCheck: string[] = ['remember'];
 
-    password!: string;
+    //password!: string;
     signinas!:string;
     user:any=[{name:'admin',value:''}];
     // user(a:any){
@@ -28,13 +35,34 @@ export class LoginComponent {
     paymentOptions: any[] = [
         { name: 'Admin', value: 1 },
         { name: 'Super Admin', value: 2 }]
+    
 
     
     con(){
-        console.log(this.user);
+        console.log(this.userForm.value);
+    }
+    
+    constructor(public layoutService: LayoutService,
+        private EncrDecr:EncrDecrServiceService) { }
+    ngOnInit(){
+        this.userForm = new FormGroup({
+            'email': new FormControl(null, [Validators.required, Validators.email]),
+           'password': new FormControl(null,Validators.required),
+           'rememberme1': new FormControl(true)
+          });
+    }
+
+    encrypt(){
+        var encrypted = this.EncrDecr.set('123456$#@$^@1ERF',this.userForm.value.password);
+        var decrypted = this.EncrDecr.get('123456$#@$^@1ERF',encrypted);
+         
+          console.log('Encrypted password:' + encrypted);
+          console.log('decrypted password:' + decrypted);
     }
     
 
-    constructor(public layoutService: LayoutService) { }
     
+    getUserValue(val: any){
+        console.log(val);
+    }
 }

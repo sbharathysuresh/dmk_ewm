@@ -13,6 +13,10 @@ import { NodeService } from './demo/service/node.service';
 import { PhotoService } from './demo/service/photo.service';
 import {LoginModule} from './demo/components/auth/login/login.module'
 import { DocumentationModule} from './demo/components/documentation/documentation.module'
+import { EncrDecrServiceService } from 'src/app/service/encr-decr-service.service';
+
+import { FormBuilder, FormGroup } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
@@ -21,12 +25,17 @@ import { DocumentationModule} from './demo/components/documentation/documentatio
     imports: [
         AppRoutingModule,
         AppLayoutModule,LoginModule,DocumentationModule,
+       
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         CountryService, CustomerService, EventService, IconService, NodeService,
-        PhotoService, ProductService
+        PhotoService, ProductService,FormBuilder,EncrDecrServiceService
     ],
+    exports:[
+     
+    ],
+
     bootstrap: [AppComponent]
 })
 export class AppModule { }

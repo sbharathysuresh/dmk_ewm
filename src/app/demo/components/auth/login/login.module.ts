@@ -10,6 +10,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { AvatarModule } from 'primeng/avatar';
 import { TabViewModule } from 'primeng/tabview';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
     imports: [
@@ -22,8 +24,10 @@ import { SelectButtonModule } from 'primeng/selectbutton';
         PasswordModule,
         AvatarModule,
         TabViewModule,
-        SelectButtonModule
+        SelectButtonModule,
+        ReactiveFormsModule
     ],
-    declarations: [LoginComponent]
+    declarations: [LoginComponent],
+
 })
 export class LoginModule { }
