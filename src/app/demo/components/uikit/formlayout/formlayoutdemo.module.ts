@@ -16,6 +16,8 @@ import { InputTextModule } from "primeng/inputtext";
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ImageModule } from 'primeng/image';
 import { DialogModule } from 'primeng/dialog';
+import { TableModule } from 'primeng/table';
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
 	imports: [
@@ -34,7 +36,9 @@ import { DialogModule } from 'primeng/dialog';
 		InputTextModule,
 		RadioButtonModule,
 		ImageModule,
-		DialogModule
+		DialogModule,
+		TableModule,
+		SidebarModule,
 	],
 	declarations: [FormLayoutDemoComponent]
 })

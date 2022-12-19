@@ -56,6 +56,9 @@ export class FormLayoutDemoComponent {
     selfregistration:boolean=false;
     display: boolean = false;
     home:boolean=false;
+    dashboard:boolean=false;
+    visibleSidebar4: boolean = false;
+    visibleSidebar5: boolean = false;
 
 
     states: any[] = [
@@ -86,23 +89,43 @@ export class FormLayoutDemoComponent {
         this.createdistrictadmin=false;
         this.selfregistration=false;
         this.home=false;
+        this.dashboard=false;
        }
     toggle1(a:any){
         this.createdistrictadmin= !this.createdistrictadmin;
         this.districtadmin=false;
         this.selfregistration=false;
         this.home=false;
+        this.dashboard=false;
        }
     toggle2(a:any){
         this.selfregistration = !this.selfregistration;
         this.districtadmin=false;
         this.createdistrictadmin=false;
         this.home=false;
+        this.dashboard=false;
        }
     toggle3(a:any){
         this.home = !this.home;
         this.districtadmin=false;
         this.createdistrictadmin=false;
         this.selfregistration=false;
+        this.dashboard=false;
     }
+
+    toggledashboard(a:any){
+        this.dashboard=!this.dashboard;
+        this.home=!this.home;
+
+    }
+    customers:any=[{name:'district1', country:'name1',company:'old.desig1',status:'new.desig1',date:'01/01/2022'},
+    {name:'district2', country:'name2',company:'old.desig2',status:'new.desig2',date:'20/01/2022'},
+    {name:'district3', country:'name3',company:'old.desig3',status:'new.desig3',date:'31/01/2022'}
+    ];
+
+    customers1:any=[{name:'name1', country:'country1',company:'abc.ltd',status:'active',date:'01/01/2022'},
+    {name:'name2', country:'country2',company:'cde.ltd',status:'no-active',date:'20/01/2022'},
+    {name:'name3', country:'country2',company:'fgh.ltd',status:'no-active',date:'31/01/2022'}
+    ];
+
 }
