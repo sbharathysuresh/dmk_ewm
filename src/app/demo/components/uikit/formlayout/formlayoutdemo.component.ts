@@ -115,7 +115,7 @@ export class FormLayoutDemoComponent {
 
     toggledashboard(a:any){
         this.dashboard=!this.dashboard;
-        this.home=!this.home;
+        this.home=false;
 
     }
     customers:any=[{name:'district1', country:'name1',company:'old.desig1',status:'new.desig1',date:'01/01/2022'},
@@ -127,5 +127,11 @@ export class FormLayoutDemoComponent {
     {name:'name2', country:'country2',company:'cde.ltd',status:'no-active',date:'20/01/2022'},
     {name:'name3', country:'country2',company:'fgh.ltd',status:'no-active',date:'31/01/2022'}
     ];
+
+    items = [
+        { label: 'Add New', icon: 'pi pi-fw pi-plus' },
+        { label: 'Remove', icon: 'pi pi-fw pi-minus' }
+    ];
+    
 
 }

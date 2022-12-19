@@ -18,6 +18,9 @@ import { ImageModule } from 'primeng/image';
 import { DialogModule } from 'primeng/dialog';
 import { TableModule } from 'primeng/table';
 import { SidebarModule } from 'primeng/sidebar';
+import { ChartModule } from 'primeng/chart';
+import { StyleClassModule } from 'primeng/styleclass';
+import { MenuModule } from 'primeng/menu';
 
 @NgModule({
 	imports: [
@@ -39,6 +42,9 @@ import { SidebarModule } from 'primeng/sidebar';
 		DialogModule,
 		TableModule,
 		SidebarModule,
+		ChartModule,
+		StyleClassModule,
+		MenuModule
 	],
 	declarations: [FormLayoutDemoComponent]
 })
