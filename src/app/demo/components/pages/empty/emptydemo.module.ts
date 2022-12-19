@@ -16,8 +16,6 @@ import { InputTextModule } from "primeng/inputtext";
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { ImageModule } from 'primeng/image';
 import { DialogModule } from 'primeng/dialog';
-import { TableModule } from 'primeng/table';
-import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -37,9 +35,7 @@ import { ButtonModule } from 'primeng/button';
 		InputTextModule,
 		RadioButtonModule,
 		ImageModule,
-		DialogModule,
-		TableModule,
-		ButtonModule
+		DialogModule
     ],
     declarations: [EmptyDemoComponent]
 })

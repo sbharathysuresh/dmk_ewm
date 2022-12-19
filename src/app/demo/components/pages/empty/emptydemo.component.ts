@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Table } from 'primeng/table';
-
 
 @Component({
     templateUrl: './emptydemo.component.html'
@@ -8,11 +6,7 @@ import { Table } from 'primeng/table';
 export class EmptyDemoComponent {
     selectedState: any = null;
     cities:any[] = [
-        { label: 'New York', value: { id: 1, name: 'New York', code: 'NY' } },
-        { label: 'Rome', value: { id: 2, name: 'Rome', code: 'RM' } },
-        { label: 'London', value: { id: 3, name: 'London', code: 'LDN' } },
-        { label: 'Istanbul', value: { id: 4, name: 'Istanbul', code: 'IST' } },
-        { label: 'Paris', value: { id: 5, name: 'Paris', code: 'PRS' } }
+      
     ];
     selectedDrop:any = { value: '' };
     districtadmin:boolean=false;
@@ -66,14 +60,7 @@ export class EmptyDemoComponent {
        }
     toggle3(a:any){
         this.home = !this.home;
-        
+
     }
-
-    customers:any=[{name:'name1', country:'country1',company:'abc.ltd',status:'active',date:'01/01/2022'},
-    {name:'name2', country:'country2',company:'cde.ltd',status:'no-active',date:'20/01/2022'},
-    {name:'name3', country:'country2',company:'fgh.ltd',status:'no-active',date:'31/01/2022'}
-    ];
-    
-
 
  }
