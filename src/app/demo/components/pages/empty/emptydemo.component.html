@@ -30,6 +30,67 @@
 	</div>
 
 
+	<div class="col-9" style="margin-left:23%;">
+		<div class="card" >
+			<div class="flex justify-content-end flex-wrap card-container green-container" >
+				<p-button label="Add" icon="pi pi-plus" ></p-button>
+			</div>	
+				<div>
+					<h5>Data Table</h5>
+					<p-table [value]="customers" rowGroupMode="subheader" groupRowsBy="representative.name" sortField="representative.name" sortMode="single"  responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px">
+						<ng-template pTemplate="header">
+							<tr>
+								<th>NAME</th>
+								<th>CCOUNTRY</th>
+								<th>COMPANY</th>
+								<th>STATUS</th>
+								<th>DATE</th>
+								<th>SHOW</th>
+								<th>EDIT</th>
+								<th>DELETE</th>
+							</tr>
+						</ng-template>
+						<ng-template pTemplate="body" let-customer let-rowIndex="rowIndex">
+							<!-- <tr pRowGroupHeader *ngIf="rowGroupMetadata[customer.representative.name].index === rowIndex">
+								<td colspan="5" style="min-width: 200px;">
+									<img [alt]="customer.representative.name" src="assets/demo/images/avatar/{{customer.representative.image}}" width="32" style="vertical-align: middle" />
+									<span class="font-bold ml-2">{{customer.representative.name}}</span>
+								</td>
+							</tr> -->
+							<tr>
+								<td style="min-width: 20px;">
+									{{customer.name}}
+								</td>
+								<td style="min-width: 20px;">
+									<span >{{customer.country}}</span>
+								</td>
+								<td style="min-width: 20px;">
+									{{customer.company}}
+								</td>
+								<td style="min-width: 20px;">
+									<span>{{customer.status}}</span>
+								</td>
+								<td style="min-width: 20px;">
+									{{customer.date}}
+								</td>
+								<td style="min-width: 20px;">
+									<button pButton class="p-button-success" icon="pi pi-eye"></button>
+								</td>
+								<td style="min-width: 20px;">
+									<button pButton icon="pi pi-user-edit"></button>
+								</td>
+								<td style="min-width: 20px;">
+									<button pButton icon="pi pi-times" class="p-button-danger"></button>
+								</td>
+							</tr>
+						</ng-template>
+					</p-table>
+
+				</div>	
+		</div>
+	</div>
+
+	
 
 
 
@@ -98,7 +159,8 @@
 <div *ngIf="createdistrictadmin" class="col-12 md:col-6" style="padding-left:380px">
 			<div class="card p-fluid" style="width:900px">
 				<h5>Create Office Bearers </h5>
-					<div class="field grid">
+				
+				<div class="field grid">
 					<label htmlFor="name3" class="col-12 mb-2 md:col-2 md:mb-0">First Name</label>
 						<div class="col-12 md:col-10">
 							<input pInputText id="name3" type="text" />
